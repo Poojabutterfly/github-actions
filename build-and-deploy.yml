@@ -28,13 +28,13 @@ jobs:
       - name: Login to Docker Hub
         uses: docker/login-action@v2
         with:
-          username: ${{ secrets.DOCKERHUB_USERNAME=vinod20010330@gmail.com }}
-          password: ${{ secrets.DOCKERHUB_TOKEN=vinod12345}}
+          username: ${{ secrets.DOCKERHUB_USERNAME}}
+          password: ${{ secrets.DOCKERHUB_TOKEN}}
 
       - name: Build Docker image
         run: |
-          docker build -t vinod/react:latest .
-          docker push vinod/react:latest
+          docker build -t prudhvi1247/react/react:latest .
+          docker push prudhvi1247/react/react:latest
         env:
           DOCKER_BUILDKIT: 1  # Enable BuildKit for improved Docker build performance
 
